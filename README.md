@@ -41,7 +41,7 @@ Arezalgamer89 - the python implementation
 
 [Breadtard](https://github.com/breadtard) - for making this encryption algorithm
 
-NarratingSince86 - Emotional Support
+NarratingSince86 (specialrocketagents@gmail.com) - Emotional Support
 
 # License and PR
 MIT, MIT just do whatever you want with the code
