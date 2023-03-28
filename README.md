@@ -38,7 +38,9 @@ The program will ask your for the encrypted hex, then will ask you for the passp
 # Credits?
 
 Arezalgamer89 - the python implementation
+
 [Breadtard](https://github.com/breadtard) - for making this encryption algorithm
+
 NarratingSince86 - Emotional Support
 
 # License and PR
