@@ -17,9 +17,20 @@ When you run `main.py`, You are greeted with a choice of encrypting or decryptin
 
 For encryption, you will need to provide your plain text, and then provide your password to encrypt your text.
 
+The Program will then spit out the encrypted text and it should look like this:
+```00000000000000000000000000537065636961353d1a430a17116114080f0607```
+
+Try figuring that out now ;)
+
+The Decryption process is dangrously the same as the encryption one.
+
+The program will ask your for the encrypted hex, then will ask you for the passphrase that was used to encrypt the text. It will then get out the correct text if done correctly.
+
 **Side Note: If you and your encrypting partner plan on having the same password, Edit the main.py file and scroll to the bottom. Then remove the `input()` field on password and replace it with your choosing password, You can do this same process on the decrypt section too.**
 
 # Side Notes
 - When you forget a password, that message is **GONE**
 - Using KawaiiXOR for simple messages such as `hi` is not healthy, use it when you are in secretive environments such as telling people that a certain someone is an alt of a banned person
 - Avoid encrypting long sentences, something even as much as `uwutastic` will generate a lot of zeros at the beginning, Passphrases have little effect on this
+- Should you enter the Encryption Hex or the Passphrase wrong during the decryption process, the program will not notify you of it being incorrect but rather result in a bunch of symbols and letters. For now the only way of telling the decryption was succesful is to receive a fluent sentence or word instead of blabs.
+- Don't go too easy on the passphrase part, so even if someone snitches to the admins and shows them this algorithm, they still need to figure out the password to decrypt it fully.
