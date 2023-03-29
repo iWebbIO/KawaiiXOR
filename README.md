@@ -1,4 +1,4 @@
-# KawaiiXOR
+# KawaiiXOR / SplitXOR / SecureXOR
 Tax-writeoff encryption algorithm to send confidental messages
 
 
@@ -34,6 +34,7 @@ The program will ask your for the encrypted hex, then will ask you for the passp
 - Avoid encrypting long sentences, something even as much as `uwutastic` will generate a lot of zeros at the beginning, Passphrases have little effect on this
 - Should you enter the Encryption Hex or the Passphrase wrong during the decryption process, the program will not notify you of it being incorrect but rather result in a bunch of symbols and letters. For now the only way of telling the decryption was succesful is to receive a fluent sentence or word instead of blabs.
 - Don't go too easy on the passphrase part, so even if someone snitches to the admins and shows them this algorithm, they still need to figure out the password to decrypt it fully.
+- When pronouncing KawaiiXOR, Pronounce it as KawaiiZOR and not KawaiiExo-Ar, Same goes for SplitXOR but not SecureXOR. When pronouncing SecureXOR, pronounce it as SecureExor (not SecureX-O-R)
 
 # Credits?
 
