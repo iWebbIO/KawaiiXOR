@@ -1,4 +1,4 @@
-# KawaiiXOR / SplitXOR / SecureXOR
+# KawaiiXOR / ~~Sp~~litXOR / ~~Secur~~eXOR
 [![wakatime](https://wakatime.com/badge/github/Special-Rocket-Agents/KawaiiXOR.svg)](https://wakatime.com/badge/github/Special-Rocket-Agents/KawaiiXOR)
 
 Tax-writeoff encryption algorithm to send confidental messages
