@@ -38,14 +38,6 @@ The program will ask your for the encrypted hex, then will ask you for the passp
 - Don't go too easy on the passphrase part, so even if someone snitches to the admins and shows them this algorithm, they still need to figure out the password to decrypt it fully.
 - When pronouncing KawaiiXOR, Pronounce it as KawaiiZOR and not KawaiiExo-Ar, Same goes for SplitXOR but not SecureXOR. When pronouncing SecureXOR, pronounce it as SecureExor (not SecureX-O-R)
 
-# Credits?
-
-Arezalgamer89 - the python implementation
-
-[Breadtard](https://github.com/breadtard) - for making this encryption algorithm
-
-NarratingSince86 (specialrocketagents@gmail.com) - Emotional Support
-
 # License and PR
 MIT, MIT just do whatever you want with the code
 
