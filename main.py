@@ -44,6 +44,8 @@ cryptchoice = input("1. Encrypt or 2. Decrypt >>> ")
 if cryptchoice == "1":
     plaintext = input("Enter plaintext > ")
     password = input("Enter passphrase/password (IS VISIBLE) >>> ")
+    # You can set your default password to save yourself the hassle, just replace input with your own password
+    # You will also need to do this on the decrypt mode too.
     # Encrypt message
     encrypted_hex = encrypt_message(plaintext, password)
     print("Encrypted message:", encrypted_hex)
