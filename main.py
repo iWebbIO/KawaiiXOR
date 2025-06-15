@@ -1,57 +1,43 @@
-import hashlib
+def calculate_sum(numbers):
+    return sum(numbers)
 
-def encrypt_message(plaintext, password):
-    # Convert plaintext to binary string
-    plaintext_bits = ''.join(format(ord(c), '08b') for c in plaintext)
-    
-    # Split plaintext into chunks of 256 bits
-    chunk_size = 256
-    plaintext_chunks = [plaintext_bits[i:i+chunk_size] for i in range(0, len(plaintext_bits), chunk_size)]
-    
-    # XOR first chunk with password
-    encrypted_chunks = [int(plaintext_chunks[0], 2) ^ int(''.join(format(ord(c), '08b') for c in password), 2)]
-    
-    # XOR remaining chunks with hash of previous chunk
-    for i in range(1, len(plaintext_chunks)):
-        previous_chunk_hash = hashlib.sha256(bytes.fromhex(hex(encrypted_chunks[-1])[2:])).hexdigest()
-        encrypted_chunks.append(int(plaintext_chunks[i], 2) ^ int(previous_chunk_hash, 16))
-    
-    # Convert encrypted chunks to hexadecimal string
-    encrypted_hex = ''.join(hex(chunk)[2:].zfill(64) for chunk in encrypted_chunks)
-    
-    return encrypted_hex
+def calculate_average(numbers):
+    if not numbers:
+        return 0
+    return sum(numbers) / len(numbers)
 
+def find_max(numbers):
+    if not numbers:
+        return None
+    return max(numbers)
 
-def decrypt_message(encrypted_hex, password):
-    # Convert encrypted message to list of integers
-    encrypted_chunks = [int(encrypted_hex[i:i+64], 16) for i in range(0, len(encrypted_hex), 64)]
-    
-    # XOR first chunk with password
-    plaintext_chunks = [bin(encrypted_chunks[0] ^ int(''.join(format(ord(c), '08b') for c in password), 2))[2:].zfill(256)]
-    
-    # XOR remaining chunks with hash of previous chunk
-    for i in range(1, len(encrypted_chunks)):
-        previous_chunk_hash = hashlib.sha256(bytes.fromhex(hex(encrypted_chunks[i-1])[2:])).hexdigest()
-        plaintext_chunks.append(bin(encrypted_chunks[i] ^ int(previous_chunk_hash, 16))[2:].zfill(256))
-    
-    # Convert plaintext chunks to ASCII string
-    plaintext = ''.join([chr(int(chunk[i:i+8], 2)) for chunk in plaintext_chunks for i in range(0, len(chunk), 8)])
-    
-    return plaintext
+def find_min(numbers):
+    if not numbers:
+        return None
+    return min(numbers)
 
+def sort_numbers(numbers, reverse=False):
+    return sorted(numbers, reverse=reverse)
 
-cryptchoice = input("1. Encrypt or 2. Decrypt >>> ")
-if cryptchoice == "1":
-    plaintext = input("Enter plaintext > ")
-    password = input("Enter passphrase/password (IS VISIBLE) >>> ")
-    # You can set your default password to save yourself the hassle, just replace input with your own password
-    # You will also need to do this on the decrypt mode too.
-    # Encrypt message
-    encrypted_hex = encrypt_message(plaintext, password)
-    print("Encrypted message:", encrypted_hex)
-elif cryptchoice == "2":
-    # Decrypt message
-    encrypted_hex = input("Enter encrypted hex > ")
-    password = input("Enter passphrase/password (IS VISIBLE) >>> ")
-    decrypted_plaintext = decrypt_message(encrypted_hex, password)
-    print("Decrypted message:", decrypted_plaintext)
+def filter_positive(numbers):
+    return [num for num in numbers if num > 0]
+
+def filter_negative(numbers):
+    return [num for num in numbers if num < 0]
+
+def multiply_list(numbers, factor):
+    return [num * factor for num in numbers]
+
+if __name__ == "__main__":
+    test_numbers = [1, -2, 3, -4, 5, 6, -7, 8, 9, -10]
+    
+    print(f"Original list: {test_numbers}")
+    print(f"Sum: {calculate_sum(test_numbers)}")
+    print(f"Average: {calculate_average(test_numbers)}")
+    print(f"Maximum: {find_max(test_numbers)}")
+    print(f"Minimum: {find_min(test_numbers)}")
+    print(f"Sorted ascending: {sort_numbers(test_numbers)}")
+    print(f"Sorted descending: {sort_numbers(test_numbers, reverse=True)}")
+    print(f"Positive numbers: {filter_positive(test_numbers)}")
+    print(f"Negative numbers: {filter_negative(test_numbers)}")
+    print(f"Multiplied by 2: {multiply_list(test_numbers, 2)}")
